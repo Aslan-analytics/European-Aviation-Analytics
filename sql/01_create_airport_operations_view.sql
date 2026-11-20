@@ -18,6 +18,4 @@ CREATE OR REPLACE VIEW public.vw_airport_operations
    FROM airport_traffic t
      LEFT JOIN airport_delays d ON t.flt_date = d.flt_date AND t.apt_icao::text = d.apt_icao::text;
 
-ALTER TABLE public.vw_airport_operations
-    OWNER TO postgres;
 
